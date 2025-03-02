@@ -1,0 +1,36 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { HTMLAttributes } from 'astro/types';
+import { twMerge } from 'tailwind-merge';
+
+type Variant = 'primary' | 'secondary' | 'text'
+
+interface Props extends HTMLAttributes<'a'> {
+  variant?: Variant;
+  target?: string;
+  text?: string;
+  icon?: string;
+  [key: string]: any;
+}
+
+const {
+  variant = 'text',
+  target,
+  text = Astro.slots.render('default'),
+  icon = '',
+  class: className = '',
+  ...rest
+} = Astro.props;
+
+const variants: Record<Variant, string> = {
+  primary: 'btn btn-primary',
+  secondary: 'btn btn-secondary',
+  text: 'link',
+};
+---
+
+<a class={twMerge(variants[variant] || '', className)} {...rest}>
+  <Fragment set:html={text} />
+  {icon && <Icon name={icon} class="w-5 h-5 ml-1 -mr-1.5 rtl:mr-1 rtl:-ml-1.5 inline-block" />}
+</a>
+  
