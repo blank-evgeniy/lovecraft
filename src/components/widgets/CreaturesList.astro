@@ -1,0 +1,17 @@
+---
+import Badge from '@ui/Badge.astro';
+import Card from '@ui/Card.astro';
+import type { InferEntrySchema } from 'astro:content';
+import CreatureCard from './CreatureCard.astro';
+import type { Bestyary } from 'src/types';
+
+interface Props {
+  data: Bestyary[];
+}
+
+const { data } = Astro.props;
+---
+
+<div class="grid sm:grid-cols-[repeat(auto-fill,minmax(360px,1fr))] grid-cols-1 gap-8 mt-8 font-serif">
+  {data.map( (creature) => <CreatureCard data={creature.data}/>)}
+</div>

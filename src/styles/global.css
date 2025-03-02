@@ -26,6 +26,6 @@
   }
 
   .link {
-    @apply text-indigo-100 transition-colors hover:text-indigo-700 font-medium font-sans;
+    @apply text-indigo-100 transition-colors hover:text-indigo-400 font-medium font-sans;
   }
 }

@@ -1,0 +1,22 @@
+---
+import Badge from '@ui/Badge.astro';
+import Card from '@ui/Card.astro';
+import type { InferEntrySchema } from 'astro:content';
+
+interface Props {
+  data: InferEntrySchema<"bestiary">;
+}
+
+const { data } = Astro.props;
+---
+
+<Card class='flex flex-col animate-fade-down animate-delay-300 group'>
+  <div class="rounded-t-md aspect-[1.4] overflow-hidden">
+    <img src={data.image.url} alt={data.image.alt} class="object-cover w-full h-full group-hover:scale-110 transition-transform"/>
+  </div>
+  <h3 class="text-xl font-semibold mt-4">{data.title}</h3>
+  <p class="text-lg text-slate-200 mt-2">{data.description}</p>
+  <div class="flex flex-wrap gap-4 mt-auto pt-4">
+    {data.tags.map((tag) => <a href={`/bestiary/${tag}`}><Badge>{tag}</Badge></a> )}
+  </div>
+</Card>

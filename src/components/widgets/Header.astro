@@ -8,13 +8,13 @@ import Link from "@ui/Link.astro";
 <header class="border-b-[1px] border-slate-600 bg-slate-950/40 shadow">
   <Container>
     <nav class="flex items-center justify-between text-lg py-4">
-      <a class="flex gap-2 items-center font-bold transition-transform hover:scale-110" href="./"><Icon name={"logo"} height={48} width={48}/> Lovecraftium</a>
+      <a class="flex gap-2 items-center font-semibold text-indigo-400 font-sans transition-transform hover:scale-110" href="/"><Icon class="animate-rotate-y" name={"logo"} height={48} width={48}/> Lovecraftium</a>
 
       <ul class="md:flex gap-4 hidden">
-        <li><Link href={"./"} text="Главная"></li>
-        <li><Link href={"./"} text="О сайте"></li>
-        <li><Link href={"./"} text="Бестиарий"></li>
-        <li><Link href={"./"} text="Локации"></li>
+        <li><Link href={"/"} text="Главная"></li>
+        <!-- <li><Link href={"./"} text="О сайте"></li> -->
+        <li><Link href={"/bestiary/"} text="Бестиарий"></li>
+        <li><Link href={"/"} text="Локации"></li>
       </ul>
     </nav>
   </Container>

@@ -7,7 +7,7 @@ import Link from '@ui/Link.astro';
 ---
 
 <div class="relative">
-	<img id="background" class="blur-xl object-cover opacity-30 fixed inset-0 w-full h-full -z-10 pointer-events-none" src={heroBackground.src} alt="" fetchpriority="high" />
+	<img class="blur-xl object-cover opacity-30 fixed inset-0 w-full h-full -z-10 pointer-events-none" src={heroBackground.src} alt="" fetchpriority="high" />
 
 	<Container class='flex gap-8 h-full items-center font-serif'>
 		<div class="w-1/3 md:block hidden shrink-0">
@@ -19,8 +19,8 @@ import Link from '@ui/Link.astro';
 			<h2 class="sm:text-2xl text-lg font-medium text-slate-200">Погрузитесь в мифы, легенды и ужасы вселенной, созданной мастером хоррора.</h2>
 			<nav class="mt-8">
 				<ul class="flex flex-wrap gap-4">
-					<li> <Link href={"./"} variant='primary' text='Исследовать бестиарий'/></li>
-					<li> <Link href={"./"} variant='primary' text='Смотреть локации'/></li>				
+					<li> <Link href={"/bestiary"} variant='primary' text='Исследовать бестиарий'/></li>
+					<li> <Link href={"/"} variant='primary' text='Смотреть локации'/></li>				
 				</ul>
 			</nav>
 		</div>
