@@ -3,8 +3,6 @@ import { getCollection } from 'astro:content';
 
 import background from "@assets/bestiary_back.jpg"
 
-import Badge from '@ui/Badge.astro';
-import Card from '@ui/Card.astro';
 import Container from '@ui/Container.astro';
 import Layout from 'src/layouts/Layout.astro';
 import CreaturesList from '@widgets/CreaturesList.astro';
@@ -38,11 +36,10 @@ const filteredBestiary = posts.filter((post) => post.data.tags?.includes(tag));
 	<Container class='pt-12'>
 		<img class=" object-cover opacity-30 fixed inset-0 w-full h-full -z-20 pointer-events-none" alt="" fetchpriority="high"  src={background.src}/>
     <div class="animate-fade-down animate-delay-75 flex gap-4 justify-between flex-wrap">
-      <h1 class="sm:text-5xl text-3xl font-semibold">Бестиарий Лавкрафта - {tag}</h1>
-      <Link variant={"primary"} href="/bestiary" text='Назад' icon='arrow-left-line' class="flex-row-reverse gap-4"/>
+      <h1 class="lg:text-4xl sm:text-3xl text-2xl font-semibold">Бестиарий Лавкрафта - {tag}</h1>
+      <Link variant={"secondary"} href="/bestiary" text='Назад' icon='arrow-left-line' class="flex-row-reverse gap-4"/>
     </div>
 		
-
 		<CreaturesList data={filteredBestiary}/>
 	</Container>
 </Layout>

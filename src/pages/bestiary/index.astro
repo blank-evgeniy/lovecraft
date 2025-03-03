@@ -12,9 +12,9 @@ const bestiary = await getCollection("bestiary");
 
 <Layout>
 	<Container class='pt-12'>
-		<img class=" object-cover opacity-30 fixed inset-0 w-full h-full -z-20 pointer-events-none" alt="" fetchpriority="high"  src={background.src}/>
-		<h1 class="sm:text-5xl text-3xl font-semibold animate-fade-down animate-delay-75">Бестиарий Лавкрафта</h1>
-		<h2 class="sm:text-2xl text-lg font-medium text-slate-200 animate-fade-down animate-delay-100">Исследуйте древних богов, монстров и ужасов вселенной Лавкрафта</h2>
+		<img class="object-cover opacity-30 fixed inset-0 w-full h-full -z-20 pointer-events-none" alt="" fetchpriority="high"  src={background.src}/>
+		<h1 class="lg:text-4xl sm:text-3xl text-2xl font-semibold animate-fade-down animate-delay-75">Бестиарий Лавкрафта</h1>
+		<h2 class="lg:text-2xl sm:text-xl text-lg font-medium text-slate-200 animate-fade-down animate-delay-100">Исследуйте древних богов, монстров и ужасов вселенной Лавкрафта</h2>
 
 		<CreaturesList data={bestiary}/>
 	</Container>

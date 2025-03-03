@@ -1,0 +1,19 @@
+---
+import { getCollection, render } from 'astro:content';
+import MarkdownBestiaryLayout from 'src/layouts/MarkdownBestiaryLayout.astro';
+
+export async function getStaticPaths() {
+  const bestiary = await getCollection('bestiary');
+  return bestiary.map((creature) => ({
+    params: { slug: creature.id },
+    props: { creature },
+  }));
+}
+
+const { creature } = Astro.props;
+const { Content } = await render(creature);
+---
+
+<MarkdownBestiaryLayout frontmatter={creature.data}>
+  <Content />
+</MarkdownBestiaryLayout>

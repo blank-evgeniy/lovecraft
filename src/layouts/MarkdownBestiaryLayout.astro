@@ -1,0 +1,45 @@
+---
+import type { InferEntrySchema } from 'astro:content';
+import Layout from './Layout.astro';
+import Badge from '@ui/Badge.astro';
+import Container from '@ui/Container.astro';
+import Link from '@ui/Link.astro';
+
+interface Props {
+  frontmatter: InferEntrySchema<"bestiary">;
+}
+
+const { frontmatter } = Astro.props;
+const { title, description, image, tags } = frontmatter;
+---
+
+<Layout>
+  <Container class="pt-12">
+    <div class='flex gap-8 items-center'>
+      <img src={image.url} class="rounded-full aspect-square object-cover w-[240px] max-w-[30vw] pointer-events-none" alt={image.alt} />
+      <div>
+        <h1 class="lg:text-4xl sm:text-3xl text-2xl font-semibold">{title}</h1>
+        <p class="sm:text-2xl text-lg text-slate-200">{description}</p>
+      </div>
+      
+    </div>
+
+    <div class="prose prose-invert prose-slate mt-8 w-full">
+      <slot />
+    </div>
+
+    <div class="flex flex-wrap gap-4 mt-8">
+      {
+        tags.map((tag) => (
+          <a href={`/bestiary/tag/${tag}`}>
+            <Badge>{tag}</Badge>
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="flex justify-center">
+      <Link href="/bestiary" icon='arrow-left-line' variant="secondary" class="flex-row-reverse mt-8" text='Назад в бестиарий'/>
+    </div>
+  </Container>
+</Layout>

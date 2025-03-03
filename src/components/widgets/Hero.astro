@@ -9,14 +9,14 @@ import Link from '@ui/Link.astro';
 <div class="relative">
 	<img class="blur-xl object-cover opacity-30 fixed inset-0 w-full h-full -z-10 pointer-events-none" src={heroBackground.src} alt="" fetchpriority="high" />
 
-	<Container class='flex gap-8 h-full items-center font-serif'>
+	<Container class='flex gap-8 h-full items-center font-serif py-4'>
 		<div class="w-1/3 md:block hidden shrink-0">
-			<img class="rounded-full pointer-events-none z-10 opacity-70 border border-slate-600 shadow animate-wiggle animate-duration-1000" src={image.src} alt="Ктулху"/>
+			<img class="rounded-full max-h-[50vh] pointer-events-none z-10 opacity-70 border border-slate-600 shadow animate-wiggle animate-duration-1000" src={image.src} alt="Ктулху"/>
 		</div>
 
 		<div class="z-0 w-full animate-fade-down animate-delay-200">
-			<h1 class="sm:text-5xl text-3xl font-semibold">Добро пожаловать в мир Г.Ф. Лавкрафта.</h1>
-			<h2 class="sm:text-2xl text-lg font-medium text-slate-200">Погрузитесь в мифы, легенды и ужасы вселенной, созданной мастером хоррора.</h2>
+			<h1 class="lg:text-4xl sm:text-3xl text-2xl font-semibold">Добро пожаловать в мир Г.Ф. Лавкрафта.</h1>
+			<h2 class="lg:text-2xl sm:text-xl text-lg font-medium text-slate-200">Погрузитесь в мифы, легенды и ужасы вселенной, созданной мастером хоррора.</h2>
 			<nav class="mt-8">
 				<ul class="flex flex-wrap gap-4">
 					<li> <Link href={"/bestiary"} variant='primary' text='Исследовать бестиарий'/></li>
