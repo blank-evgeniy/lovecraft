@@ -1,21 +1,30 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
 
-import Container from "@ui/Container.astro";
-import Link from "@ui/Link.astro";
+import Container from '@ui/Container.astro';
+import Link from '@ui/Link.astro';
 ---
 
-<header class="border-b-[1px] h-20 fixed w-full z-40 border-slate-600 bg-slate-950/40 backdrop-blur-md shadow">
+<header
+  class="fixed z-40 h-20 w-full border-b-[1px] border-slate-600 bg-slate-950/40 shadow backdrop-blur-md"
+>
   <Container>
-    <nav class="flex items-center justify-between text-lg py-4">
-      <a class="flex gap-2 items-center font-semibold text-indigo-400 font-sans transition-transform hover:scale-110" href="/"><Icon class="animate-rotate-y" name={"logo"} height={48} width={48}/> Lovecraftium</a>
+    <nav class="flex items-center justify-between py-4 text-lg">
+      <a
+        class="flex items-center gap-2 font-sans font-semibold text-indigo-400 transition-transform hover:scale-110"
+        href="/"
+        ><Icon class="animate-rotate-y" name={'logo'} height={48} width={48} /> Lovecraftium</a
+      >
 
-      <ul class="md:flex gap-4 hidden">
-        <li><Link href={"/"} text="Главная"></li>
-        <!-- <li><Link href={"./"} text="О сайте"></li> -->
-        <li><Link href={"/bestiary/"} text="Бестиарий"></li>
-        <li><Link href={"/"} text="Локации"></li>
+      <ul class="hidden gap-4 md:flex">
+        <li>
+          <Link href={'/'} text="Главная" />
+          <!-- <li><Link href={"./"} text="О сайте"></li> -->
+          <li>
+            <Link href={'/bestiary/'} text="Бестиарий" />
+            <li><Link href={'/'} text="Локации" /></li>
+          </li>
+        </li>
       </ul>
-    </nav>
-  </Container>
+    </nav></Container>
 </header>

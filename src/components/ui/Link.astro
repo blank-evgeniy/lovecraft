@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 import type { HTMLAttributes } from 'astro/types';
 import { twMerge } from 'tailwind-merge';
 
-type Variant = 'primary' | 'secondary' | 'text'
+type Variant = 'primary' | 'secondary' | 'text';
 
 interface Props extends HTMLAttributes<'a'> {
   variant?: Variant;
@@ -31,6 +31,5 @@ const variants: Record<Variant, string> = {
 
 <a class={twMerge(variants[variant] || '', className)} {...rest}>
   <Fragment set:html={text} />
-  {icon && <Icon name={icon} class="w-5 h-5 inline-block" />}
+  {icon && <Icon name={icon} class="inline-block h-5 w-5" />}
 </a>
-  

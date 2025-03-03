@@ -4,21 +4,31 @@ import Card from '@ui/Card.astro';
 import type { InferEntrySchema } from 'astro:content';
 
 interface Props {
-  data: InferEntrySchema<"bestiary">;
+  data: InferEntrySchema<'bestiary'>;
   id: string;
 }
 
 const { data, id } = Astro.props;
 ---
 
-<Card class='flex flex-col animate-fade-down animate-delay-300 group relative'>
-  <a href={`/bestiary/${id}`} class="inset-0 absolute z-10"/>
-  <div class="rounded-t-md aspect-[1.4] overflow-hidden">
-    <img src={data.image.url} alt={data.image.alt} class="object-cover w-full h-full group-hover:scale-110 transition-transform"/>
+<Card class="animate-fade-down animate-delay-300 group relative flex flex-col">
+  <a href={`/bestiary/${id}`} class="absolute inset-0 z-10"></a>
+  <div class="aspect-[1.4] overflow-hidden rounded-t-md">
+    <img
+      src={data.image.url}
+      alt={data.image.alt}
+      class="h-full w-full object-cover transition-transform group-hover:scale-110"
+    />
   </div>
-  <h3 class="text-xl font-semibold mt-4">{data.title}</h3>
-  <p class="text-lg text-slate-200 mt-2">{data.description}</p>
-  <div class="flex flex-wrap gap-4 mt-auto pt-4">
-    {data.tags.map((tag) => <a class="z-20" href={`/bestiary/tag/${tag}`}><Badge>{tag}</Badge></a> )}
+  <h3 class="mt-4 text-xl font-semibold">{data.title}</h3>
+  <p class="mt-2 text-lg text-slate-200">{data.description}</p>
+  <div class="mt-auto flex flex-wrap gap-4 pt-4">
+    {
+      data.tags.map((tag) => (
+        <a class="z-20" href={`/bestiary/tag/${tag}`}>
+          <Badge>{tag}</Badge>
+        </a>
+      ))
+    }
   </div>
 </Card>

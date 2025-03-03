@@ -5,9 +5,9 @@ interface Props {
   class?: string;
 }
 
-const {class: className} = Astro.props;
+const { class: className } = Astro.props;
 ---
 
-<div class={twMerge("max-w-[1200px] w-full sm:px-4 px-2 mx-auto", className)}>
+<div class={twMerge('max-w-[1200px] w-full sm:px-4 px-2 mx-auto', className)}>
   <slot />
 </div>

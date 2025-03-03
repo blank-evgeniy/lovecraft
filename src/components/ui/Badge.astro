@@ -8,6 +8,11 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<div class={twMerge("border border-indigo-600 rounded-4xl bg-indigo-900 hover:bg-indigo-600 px-2 py-1 text-sm font-sans", className)}>
-  <slot/>
+<div
+  class={twMerge(
+    'border border-indigo-600 rounded-4xl bg-indigo-900 hover:bg-indigo-600 px-2 py-1 text-sm font-sans',
+    className
+  )}
+>
+  <slot />
 </div>

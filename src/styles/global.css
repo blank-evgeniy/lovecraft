@@ -1,10 +1,10 @@
-@import "tailwindcss";
-@import "tailwindcss-animated";
+@import 'tailwindcss';
+@import 'tailwindcss-animated';
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-serif: "Crimson Text", serif;
-  --font-sans: "Montserrat";
+  --font-serif: 'Crimson Text', serif;
+  --font-sans: 'Montserrat';
 }
 
 @layer base {
@@ -15,18 +15,18 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 cursor-pointer font-medium font-sans rounded-md;
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-md font-sans font-medium;
   }
 
   .btn-primary {
-    @apply border bg-indigo-700 border-indigo-400 transition-colors hover:bg-indigo-400 px-4 py-2;
+    @apply border border-indigo-400 bg-indigo-700 px-4 py-2 transition-colors hover:bg-indigo-400;
   }
 
   .btn-secondary {
-    @apply border border-indigo-700 text-indigo-200 bg-inherit transition-colors hover:bg-indigo-700 hover:text-slate-50 px-4 py-2;
+    @apply border border-indigo-700 bg-inherit px-4 py-2 text-indigo-200 transition-colors hover:bg-indigo-700 hover:text-slate-50;
   }
 
   .link {
-    @apply text-indigo-100 transition-colors hover:text-indigo-400 font-medium font-sans;
+    @apply font-sans font-medium text-indigo-100 transition-colors hover:text-indigo-400;
   }
 }

@@ -12,6 +12,12 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<div class="grid sm:grid-cols-[repeat(auto-fill,minmax(360px,1fr))] grid-cols-1 gap-8 mt-8 font-serif">
-  {data.map( (creature) => <CreatureCard id={creature.id} data={creature.data}/>)}
+<div
+  class="mt-8 grid grid-cols-1 gap-8 font-serif sm:grid-cols-[repeat(auto-fill,minmax(360px,1fr))]"
+>
+  {
+    data.map((creature) => (
+      <CreatureCard id={creature.id} data={creature.data} />
+    ))
+  }
 </div>
