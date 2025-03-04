@@ -1,9 +1,27 @@
 ---
 import Container from '@ui/Container.astro';
+import Link from '@ui/Link.astro';
 ---
 
 <footer>
-  <Container class="flex items-center justify-center pt-12 pb-4">
-    <p>2025 — Made with ♥ by Blankeee</p>
+  <Container class="pt-12 pb-4">
+    <div class="flex justify-center gap-4 pb-4">
+      <Link
+        icon="github"
+        text="Github"
+        target="_blank"
+        href="https://github.com/blank-evgeniy/lovecraft"
+      />
+
+      <Link
+        icon="user"
+        text="Обо мне"
+        target="_blank"
+        href="https://blankevgeniy.vercel.app/"
+      />
+
+      <Link icon="info" text="О сайте" href="/about" />
+    </div>
+    <p class="text-center">2025 — Made with ♥ by Blankeee</p>
   </Container>
 </footer>

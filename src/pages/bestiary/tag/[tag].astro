@@ -32,7 +32,7 @@ const { posts } = Astro.props;
 const filteredBestiary = posts.filter((post) => post.data.tags?.includes(tag));
 ---
 
-<Layout>
+<Layout title={`Lovecraftium | ${tag}`}>
   <Container class="pt-12">
     <img
       class="pointer-events-none fixed inset-0 -z-20 h-full w-full object-cover opacity-30"

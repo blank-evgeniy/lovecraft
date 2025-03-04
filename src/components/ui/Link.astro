@@ -7,7 +7,6 @@ type Variant = 'primary' | 'secondary' | 'text';
 
 interface Props extends HTMLAttributes<'a'> {
   variant?: Variant;
-  target?: string;
   text?: string;
   icon?: string;
   [key: string]: any;
@@ -15,7 +14,6 @@ interface Props extends HTMLAttributes<'a'> {
 
 const {
   variant = 'text',
-  target,
   text = Astro.slots.render('default'),
   icon = '',
   class: className = '',

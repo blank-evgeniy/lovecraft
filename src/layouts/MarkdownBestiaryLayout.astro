@@ -15,7 +15,7 @@ const { frontmatter } = Astro.props;
 const { title, description, image, tags } = frontmatter;
 ---
 
-<Layout>
+<Layout title={`Lovecraftium | Бестиарий - ${title}`}>
   <Container class="pt-12">
     <div
       class="animate-fade-down animate-delay-[100ms] flex items-center gap-8"
