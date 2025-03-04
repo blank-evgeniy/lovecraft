@@ -1,0 +1,16 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import Layout from 'src/layouts/Layout.astro';
+import Container from '@ui/Container.astro';
+import Heading1 from '@ui/Heading1.astro';
+---
+
+<Layout centerContent>
+  <Container class="flex flex-col items-center justify-center gap-4">
+    <Icon name={'logo'} width={258} height={258} />
+    <Heading1 class="text-center font-sans text-indigo-400"
+      >Страница не найдена :'(</Heading1
+    >
+  </Container>
+</Layout>

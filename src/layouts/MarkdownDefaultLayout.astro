@@ -8,12 +8,12 @@ const { frontmatter } = Astro.props;
 
 <Layout title={`Lovecraftium | ${frontmatter.title}`}>
   <Container class="pt-12">
-    <Heading1 class="animate-fade-down animate-delay-100"
-      >{frontmatter.title}</Heading1
-    >
     <div
-      class="prose prose-invert prose-slate animate-fade-down animate-delay-[400ms] mt-8 w-full"
+      class="prose prose-invert prose-slate animate-fade-down animate-delay-[400ms] mx-auto mt-8 w-full"
     >
+      <Heading1 class="animate-fade-down animate-delay-100"
+        >{frontmatter.title}</Heading1
+      >
       <slot />
     </div>
   </Container>

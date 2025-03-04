@@ -1,6 +1,9 @@
 ---
-import { LocationCarousel } from '@widgets/LocationCarousel';
 import Layout from '../layouts/Layout.astro';
+
+import background from '@assets/locations_back.jpg';
+
+import { LocationCarousel } from '@widgets/LocationCarousel';
 import Container from '@ui/Container.astro';
 import Heading2 from '@ui/Heading2.astro';
 import Heading1 from '@ui/Heading1.astro';
@@ -8,6 +11,12 @@ import Heading1 from '@ui/Heading1.astro';
 
 <Layout title="Lovecraftium | Локации">
   <Container class="pt-12">
+    <img
+      class="pointer-events-none fixed inset-0 -z-20 h-full w-full object-cover opacity-30"
+      alt=""
+      fetchpriority="high"
+      src={background.src}
+    />
     <Heading1 class="animate-fade-down animate-delay-75">
       Локации мира Лавкрафта
     </Heading1>
