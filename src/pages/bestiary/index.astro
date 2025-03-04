@@ -6,6 +6,8 @@ import background from '@assets/bestiary_back.jpg';
 
 import Layout from 'src/layouts/Layout.astro';
 import CreaturesList from '@widgets/CreaturesList.astro';
+import Heading1 from '@ui/Heading1.astro';
+import Heading2 from '@ui/Heading2.astro';
 
 const bestiary = await getCollection('bestiary');
 ---
@@ -18,16 +20,12 @@ const bestiary = await getCollection('bestiary');
       fetchpriority="high"
       src={background.src}
     />
-    <h1
-      class="animate-fade-down animate-delay-75 text-2xl font-semibold sm:text-3xl lg:text-4xl"
-    >
+    <Heading1 class="animate-fade-down animate-delay-75">
       Бестиарий Лавкрафта
-    </h1>
-    <h2
-      class="animate-fade-down animate-delay-100 text-lg font-medium text-slate-200 sm:text-xl lg:text-2xl"
-    >
+    </Heading1>
+    <Heading2 class="animate-fade-down animate-delay-100">
       Исследуйте древних богов, монстров и ужасов вселенной Лавкрафта
-    </h2>
+    </Heading2>
 
     <CreaturesList data={bestiary} />
   </Container>

@@ -1,0 +1,20 @@
+---
+import { LocationCarousel } from '@widgets/LocationCarousel';
+import Layout from '../layouts/Layout.astro';
+import Container from '@ui/Container.astro';
+import Heading2 from '@ui/Heading2.astro';
+import Heading1 from '@ui/Heading1.astro';
+---
+
+<Layout>
+  <Container class="pt-12">
+    <Heading1 class="animate-fade-down animate-delay-75">
+      Локации мира Лавкрафта
+    </Heading1>
+    <Heading2 class="animate-fade-down animate-delay-100 pb-8">
+      Изучите локации, сгенерированные нейросетью по описаниям Лавкрафта
+    </Heading2>
+
+    <LocationCarousel client:load />
+  </Container>
+</Layout>

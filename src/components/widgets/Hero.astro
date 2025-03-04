@@ -4,6 +4,8 @@ import image from '@assets/Cthulhu.jpg';
 
 import Container from '@ui/Container.astro';
 import Link from '@ui/Link.astro';
+import Heading1 from '@ui/Heading1.astro';
+import Heading2 from '@ui/Heading2.astro';
 ---
 
 <div class="relative">
@@ -24,13 +26,11 @@ import Link from '@ui/Link.astro';
     </div>
 
     <div class="animate-fade-down animate-delay-200 z-0 w-full">
-      <h1 class="text-2xl font-semibold sm:text-3xl lg:text-4xl">
-        Добро пожаловать в мир Г.Ф. Лавкрафта.
-      </h1>
-      <h2 class="text-lg font-medium text-slate-200 sm:text-xl lg:text-2xl">
+      <Heading1> Добро пожаловать в мир Г.Ф. Лавкрафта. </Heading1>
+      <Heading2>
         Погрузитесь в мифы, легенды и ужасы вселенной, созданной мастером
         хоррора.
-      </h2>
+      </Heading2>
       <nav class="mt-8">
         <ul class="flex flex-wrap gap-4">
           <li>
@@ -40,7 +40,13 @@ import Link from '@ui/Link.astro';
               text="Исследовать бестиарий"
             />
           </li>
-          <li><Link href={'/'} variant="primary" text="Смотреть локации" /></li>
+          <li>
+            <Link
+              href={'/locations/'}
+              variant="primary"
+              text="Смотреть локации"
+            />
+          </li>
         </ul>
       </nav>
     </div>

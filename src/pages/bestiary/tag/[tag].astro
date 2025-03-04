@@ -7,6 +7,7 @@ import Container from '@ui/Container.astro';
 import Layout from 'src/layouts/Layout.astro';
 import CreaturesList from '@widgets/CreaturesList.astro';
 import Link from '@ui/Link.astro';
+import Heading1 from '@ui/Heading1.astro';
 
 export async function getStaticPaths() {
   const bestiary = await getCollection('bestiary');
@@ -42,9 +43,9 @@ const filteredBestiary = posts.filter((post) => post.data.tags?.includes(tag));
     <div
       class="animate-fade-down animate-delay-75 flex flex-wrap justify-between gap-4"
     >
-      <h1 class="text-2xl font-semibold sm:text-3xl lg:text-4xl">
+      <Heading1>
         Бестиарий Лавкрафта - {tag}
-      </h1>
+      </Heading1>
       <Link
         variant={'secondary'}
         href="/bestiary"
