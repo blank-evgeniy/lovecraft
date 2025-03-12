@@ -100,7 +100,7 @@ export const LocationCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <p className="pt-8 font-serif text-lg font-medium text-slate-200 sm:text-xl">
+      <p className="animate-fade-down animate-delay-[300ms] pt-8 font-serif text-lg font-medium text-slate-200 sm:text-xl">
         {description}
       </p>
     </>
